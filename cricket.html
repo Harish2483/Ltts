@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+<body>
+    <form method="post" name="myform" onsubmit="return validateform()" id="form1">
+        <h2>L&T Cricket Tournament</h2>
+        <div style="float:left;">	
+            <label for="team1">Enter the Team Name 1:</label>
+            <input type="text" name="team1" placeholder="Enter Team name" required>
+        </div>
+        <div style="float:left;">
+            <label for="score1">Enter the Score 1:</label>
+            <input type="text" name="score1" placeholder="Enter Score" required>
+        </div>
+        <div style="float:left;">
+            <label for="team2">Enter the Team Name 2:</label>
+            <input type="text" name="team2" placeholder="Enter Team name" required>
+        </div>
+        <div style="float:left;">
+            <label for="score2">Enter the Score 2:</label>
+            <input type="text" name="score2" placeholder="Enter Score" required>
+        </div>
+            <input type="submit" value="Result"  onclick="showMessage()">
+            <span id="spanResult"></span>
+    </form>
+    <script src="script1.js"> </script>  
+</body>
+</html>
