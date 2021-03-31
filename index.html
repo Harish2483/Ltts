@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GitHub Details</title>
+
+	<!-- INCLUDING JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+
+<body>
+	<section>
+		<h1>GitHub Users</h1>
+
+		<!-- TABLE CONSTRUCTION-->
+		<table id='table'>
+			<!-- HEADING FORMATION -->
+			<tr>
+				<th>Login</th>
+				<th>ID</th>
+				<th>Image URL</th>				
+			</tr>
+
+			<script>
+				$(document).ready(function () {
+
+					// FETCHING DATA FROM JSON FILE
+					$.getJSON("https://api.github.com/users",
+							function (data) {
+						var student = '';
+
+						// ITERATING THROUGH OBJECTS
+						$.each(data, function (key, value) {
+
+							//CONSTRUCTION OF ROWS HAVING
+							// DATA FROM JSON OBJECT
+							student += '<tr>';
+							student += '<td>' +
+								value.login + '</td>';
+
+							student += '<td>' +
+								value.id + '</td>';
+
+							student += '<td>' + "<img src=" +
+								value.avatar_url +   '</td>' ;
+
+							
+							student += '</tr>';
+						});
+						
+						//INSERTING ROWS INTO TABLE
+						$('#table').append(student);
+					});
+				});
+			</script>
+	</section>
+</body>
+
+</html>

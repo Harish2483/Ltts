@@ -1,29 +1,35 @@
-div {
-    width: 49%;
-    padding: 10px 0px;
-}
-input {
-    width: 50%;
-    padding: 10px;
-}
+	table {
+			margin: 0 auto;
+			font-size: large;
+            border: 1px solid black;
+            width:100%;
+		}
 
-#form1 {
-    border: 3px solid gray;
-    padding: 5px 5px;
-}
+		h1 {
+			text-align: center;
+			color: #006600;
+			font-size: xx-large;
+			font-family: 'Gill Sans',
+				'Gill Sans MT', ' Calibri',
+				'Trebuchet MS', 'sans-serif';
+		}
 
-h2 {
-    text-align: center;
-}
+		td {
+			background-color: #E4F5D4;
+			border: 1px solid black;
+		}
 
-input[type="submit"] {
-    width: 12%;
-    padding: 10px;   
-    margin-left: 500px;
-    background: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-}
+		th,
+		td {
+			font-weight: bold;
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+
+		td {
+			font-weight: lighter;
+        }
+        img{
+            width: 100px;
+        }
